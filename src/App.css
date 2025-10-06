@@ -1,10 +1,50 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url('/fonts/MyFont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+/* 1. Reset default margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Base font setup */
+html {
+  font-size: 16px; /* base font size */
 }
 
 body {
-  font-family: 'MyFont', sans-serif;
+  font-family: "MyFont", "Poppins", "Roboto", sans-serif;
+  font-size: 1rem;      /* 16px */
+  line-height: 1.5;     /* makes text spacing consistent */
+  background-color: #fff;
+  color: #000;
+}
+
+/* 3. Heading sizes */
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+}
+
+/* 4. Paragraphs */
+p {
+  font-size: 1rem; /* 16px */
+}
+
+/* 5. Optional: scale down MyFont if it naturally looks big */
+body, h1, h2, h3, p {
+  font-family: "MyFont", "Poppins", "Roboto", sans-serif;
+  /* If MyFont looks too tall, reduce slightly */
+  font-size: 0.95rem;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/MyFont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
