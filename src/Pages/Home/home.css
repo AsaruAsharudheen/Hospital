@@ -377,6 +377,7 @@
     gap: 50px; /* Reduce gap further on tablets */
     height: auto;
     padding: 40px 5%;
+    margin-top: 20px;
   }
   .detail-box-padded {
     padding-right: 50px; /* Reduce separator padding */
