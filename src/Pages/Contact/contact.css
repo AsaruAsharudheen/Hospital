@@ -1,0 +1,733 @@
+/* ======================================= */
+/* ===== Global / Base Styles (Desktop) ===== */
+/* ======================================= */
+
+/* Contact Page Navbar */
+.Contact-page-navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #edf2fa;
+  font-family: 'Poppins', sans-serif;
+  height: 150px;
+  padding: 20px 40px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.Contact-page-logo img {
+  height: 60px;
+}
+
+.Contact-page-menus-navbar {
+  display: flex;
+  gap: 40px;
+  z-index: 1;
+}
+
+.Contact-page-menus-navbar p {
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.Contact-page-menus-navbar p::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: rgb(74, 124, 210);
+  transition: width 0.3s ease;
+}
+
+.Contact-page-menus-navbar p:hover::after {
+  width: 100%;
+}
+
+.Contact-page-button-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Contact-page-button-nav button {
+  font-size: 20px;
+  padding: 15px 16px;
+  background-color: rgb(74, 124, 210);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+}
+
+.Contact-page-button-nav button:hover {
+  background-color: #00264d;
+  transform: scale(1.05);
+}
+
+/* Hamburger Icon (Initially Hidden) */
+.mobile-menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+/* ===== Contact Page Service Section (Desktop) ===== */
+.Contact-page-service {
+  height: 450px;
+  background-color: #edf2fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Contact-page-service h1 {
+  font-size: 70px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  width: 1700px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.Contact-page-paths {
+  display: flex;
+  gap: 20px;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.Contact-page-paths p {
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Contact-page-paths i {
+  color: rgb(5, 5, 70);
+}
+
+
+/* ===== Contact Page Contents Section (Desktop) ===== */
+.Contact-page-contents {
+  display: flex;
+  max-width: 1700px;
+  margin: 100px auto;
+  font-family: 'Poppins', sans-serif;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Left Section */
+.left-contact-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 10px;
+  width: 100%;
+  max-width: 980px;
+}
+
+.left-contact-page h1 {
+  font-size: 57px;
+  font-weight: 600;
+  line-height: 70px;
+  color: #0a1f44;
+}
+
+.left-contact-page p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #6c7a8c;
+  line-height: 32px;
+}
+
+/* Address Grid */
+.address-contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.address-contact-page .first {
+  display: flex;
+  flex-direction: column;
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.address-contact-page .first:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.address-contact-page .first h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0a1f44;
+  display: flex;
+  gap: 10px;
+}
+
+.address-contact-page .first p {
+  font-size: 18px;
+  color: #6c7a8c;
+  font-weight: 400;
+}
+
+/* Right Section (Form) */
+.right-contact-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #edf2fa;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 16px;
+  justify-content: center;
+}
+
+.right-contact-page h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0a1f44;
+  margin-bottom: 10px;
+}
+
+/* Form Styling */
+.right-contact-page input,
+.right-contact-page textarea {
+  padding: 15px 18px;
+  border: 1px solid #ccd6e3;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.right-contact-page input:focus,
+.right-contact-page textarea:focus {
+  border: 1px solid rgb(74, 124, 210);
+  box-shadow: 0 0 0 3px rgba(74, 124, 210, 0.2);
+  outline: none;
+}
+
+.right-contact-page textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+/* Submit Button */
+.right-contact-page button {
+  background: rgb(74, 124, 210);
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.right-contact-page button:hover {
+  background: #00264d;
+  transform: scale(1.05);
+}
+
+/* ===== Animations (Desktop/Global) ===== */
+.Contact-page-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+}
+
+/* Fade down animation */
+.fade-down {
+  animation: fadeDown 0.8s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom-in animation */
+.zoom-in {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Mobile Menu Overlay (Hidden on Desktop) ===== */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2000;
+}
+
+/* Slide-in Side Menu */
+.mobile-menu {
+  background: #edf2fa;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.mobile-menu p {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.mobile-menu button {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: #4a7cd2;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ======================================= */
+/* ===== MOBILE RESPONSIVE STYLES (Max Width 1024px) ===== */
+/* ======================================= */
+@media screen and (max-width: 1024px) {
+  /* --- Navbar --- */
+  .Contact-page-navbar {
+    height: 90px;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: white;
+  }
+
+  /* Hide Desktop Menus */
+  .Contact-page-menus-navbar,
+  .Contact-page-button-nav {
+    display: none;
+  }
+
+  /* Show Mobile Icon */
+  .mobile-menu-icon {
+    display: block;
+    font-size: 28px;
+    color: #0a1f44;
+  }
+
+
+  /* --- Contact Contents Section --- */
+  .Contact-page-contents {
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 0 30px;
+    gap: 60px;
+  }
+
+  /* Left Section Adjustments */
+  .left-contact-page {
+    max-width: 100%;
+    padding-left: 0;
+    gap: 20px;
+  }
+
+  .left-contact-page h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .left-contact-page p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  /* Right Section (Form) Adjustments */
+  .right-contact-page {
+    max-width: 100%;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .right-contact-page h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  /* Form button adjustment */
+  .right-contact-page button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* ======================================= */
+/* ===== MOBILE RESPONSIVE STYLES (Max Width 768px) ===== */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+
+  /* --- Contact Service Section --- */
+  .Contact-page-service {
+    height: 300px;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .Contact-page-service h1 {
+    font-size: 36px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 400px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .Contact-page-paths {
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .Contact-page-paths p {
+    font-size: 16px;
+  }
+
+  .Contact-page-paths i {
+    font-size: 14px;
+  }
+}
+
+/* ======================================= */
+/* ===== MOBILE RESPONSIVE STYLES (Max Width 600px) ===== */
+/* ======================================= */
+@media screen and (max-width: 600px) {
+
+  /* --- Navbar --- */
+  .Contact-page-navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .Contact-page-logo img {
+    height: 40px;
+    padding-top: 0;
+  }
+
+  .mobile-menu {
+    width: 80%;
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+
+  .mobile-menu p {
+    font-size: 18px;
+  }
+
+  .mobile-menu button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* --- Contact Contents Section --- */
+  .Contact-page-contents {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  /* Further reduce h1 size */
+  .left-contact-page h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  /* Address Grid: Stack the 2-column grid into a single column */
+  .address-contact-page {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .address-contact-page .first {
+    padding: 15px;
+  }
+
+  .address-contact-page .first h4 {
+    font-size: 20px;
+  }
+
+  .address-contact-page .first p {
+    font-size: 16px;
+  }
+
+  /* Form input text size for better screen fit */
+  .right-contact-page input,
+  .right-contact-page textarea {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+/* Mobile Menu Overlay Styles */
+/* ======================================= */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  /* Using a darker, more opaque backdrop for better focus */
+  background: rgba(0, 0, 0, 0.8); 
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2000;
+  /* Add a transition for the overlay fade-in */
+  transition: background 0.3s ease;
+}
+
+/* Slide-in Side Menu (The Menu Panel) */
+.mobile-menu {
+  background: #ffffff; /* Use a crisp white background */
+  width: 75%; /* Slightly wider for better link space on most phones */
+  max-width: 320px; /* Cap the max width */
+  height: 100%;
+  padding: 60px 25px; /* Increase vertical padding for breathing room */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Slightly tighter gap between links */
+  position: relative;
+  /* Ensure a clean starting point for the animation */
+  transform: translateX(0); 
+  animation: slideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Smoother, professional curve */
+}
+
+/* Menu Links (p tags) */
+.mobile-menu p {
+  font-size: 19px;
+  /* Use the dark blue from your theme for menu items */
+  color: #0a1f44; 
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 0; /* More vertical padding for easier tapping */
+  border-bottom: 1px solid #e0e4eb; /* Subtle separator for visual clarity */
+  transition: color 0.2s ease, padding 0.2s ease;
+}
+
+.mobile-menu p:last-of-type {
+  border-bottom: none; /* No separator on the last item */
+}
+
+.mobile-menu p:hover {
+  color: #4a7cd2; /* Highlight color on hover/tap */
+  padding-left: 5px; /* Subtle visual feedback on interaction */
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 32px; /* Slightly larger and more tappable */
+  color: #0a1f44;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-icon:hover {
+  transform: rotate(90deg); /* Playful hover effect */
+}
+
+/* Menu Button */
+.mobile-menu button {
+  margin-top: 30px; /* More separation from menu links */
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px; /* Slightly rounder corners */
+  background: #4a7cd2;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(74, 124, 210, 0.3); /* Add subtle shadow */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-menu button:hover {
+  background: #00264d;
+  transform: scale(1.02);
+}
+
+/* Slide-in animation for opening */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Optional: Slide-out animation (requires adding a class on unmount/close) */
+/* If using a library like Framer Motion or react-transition-group, 
+   you can handle the slide-out via state. If just using CSS, you'd add this class: */
+/* .mobile-menu-slide-out {
+  animation: slideOut 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05) forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+} */
+
+
+
+
+/* ======================================= */
+/* ===== Scroll To Top Button Styles ===== */
+/* ======================================= */
+.scroll-to-top {
+  /* Positioning and size */
+  position: fixed;
+  bottom: 40px; /* Distance from bottom */
+  right: 40px; /* Distance from right */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  /* Appearance */
+  background-color: #4a7cd2; /* Primary blue color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above other content */
+  
+  /* Initial State (Hidden) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* State when scrolling is true (i.e., when .show-scroll class is added) */
+.scroll-to-top.show-scroll {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Icon style */
+.scroll-to-top i {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+  background-color: #00264d; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+
+/* ======================================= */
+/* ===== Mobile Responsive Adjustment ===== */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px; /* Reduced distance from bottom */
+    right: 20px; /* Reduced distance from right */
+    width: 45px; /* Slightly smaller size */
+    height: 45px;
+  }
+  
+  .scroll-to-top i {
+    font-size: 16px;
+  }
+}

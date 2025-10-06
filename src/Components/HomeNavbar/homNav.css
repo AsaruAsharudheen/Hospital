@@ -1,0 +1,105 @@
+/* =========================================== */
+/* ===== Mobile Responsive Overrides (max-width: 900px) ===== */
+/* =========================================== */
+@media (max-width: 900px) {
+  /* --- Main Navbar Adjustments (Logo & Icon) --- */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: absolute;
+    /* CRITICAL: Change 2000px to 100% and add padding */
+    width: 100%;
+    padding: 30px 5%; /* 5% padding on left/right for spacing */
+    background-color: #020b59;
+    z-index: 100;
+    gap: 120px;
+  }
+
+  /* CRITICAL: Hide the desktop menu and button */
+  .menus-navbar,
+  .button-nav button {
+    display: none;
+  }
+
+  /* CRITICAL: Show the hamburger/X icon and ensure it's white */
+  .button-nav .fa-bars,
+  .button-nav .fa-xmark {
+    display: block;
+    font-size: 28px;
+    color: #ffffff; /* White icon to match dark navbar background */
+    cursor: pointer;
+  }
+
+  /* --- Modal Overlay Styles (Dark/Home Theme) --- */
+  .mobile-menu-overlay-home {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(0, 0, 0, 0.85); /* Darker, semi-transparent overlay */
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-home {
+    /* This panel uses the primary background color for a full-screen feel */
+    width: 90%;
+    max-width: 400px;
+    background-color: #020b59; /* Your original dark background color */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Menu Items within the modal (White text) */
+  .mobile-menu-home p {
+    font-size: 22px;
+    color: #ffffff; /* White text to contrast with dark menu */
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .mobile-menu-home p:hover {
+    color: rgb(74, 124, 210); /* Blue highlight on hover */
+  }
+  .mobile-menu-home p:last-of-type {
+    border-bottom: none;
+  }
+
+  /* Button inside the modal */
+  .mobile-menu-home .mobile-book-btn-home {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 20px;
+    background-color: rgb(74, 124, 210); /* Primary blue color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  /* Optional: Logo inside modal */
+  .mobile-menu-logo-home {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+  }
+  .mobile-menu-logo-home img {
+    height: 50px;
+    /* Ensure logo is white or easily visible */
+  }
+}

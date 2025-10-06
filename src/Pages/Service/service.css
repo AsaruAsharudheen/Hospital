@@ -1,0 +1,414 @@
+/* ======================================= */
+/* ===== 1. Base Styles & Animations ===== */
+/* ======================================= */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Scroll Animations */
+.service-page-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(.2, .9, .3, 1);
+}
+
+.service-page-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left {
+    transform: translateX(-40px);
+}
+
+.fade-right {
+    transform: translateX(40px);
+}
+
+.zoom-in {
+    transform: scale(0.9);
+}
+
+.zoom-in.show {
+    transform: scale(1);
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a7cd2;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+/* ======================================= */
+/* ===== 2. Desktop Styles (Default) ===== */
+/* ======================================= */
+
+/* --- Navbar (Using Contact-page- classes from React) --- */
+.Contact-page-navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #edf2fa;
+    height: 130px;
+    padding-top: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
+.Contact-page-logo {
+    z-index: 1;
+}
+
+.Contact-page-menus-navbar {
+    display: flex;
+    gap: 40px;
+    z-index: 1;
+}
+
+.Contact-page-menus-navbar p {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.Contact-page-menus-navbar p::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(74, 124, 210);
+    transition: width 0.3s ease;
+}
+
+.Contact-page-menus-navbar p:hover::after {
+    width: 100%;
+}
+
+.Contact-page-button-nav button {
+    font-size: 20px;
+    padding: 15px 16px;
+    background-color: rgb(74, 124, 210);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    height: 50px;
+}
+
+.Contact-page-button-nav button:hover {
+    background-color: #00264d;
+    transform: scale(1.05);
+}
+
+.mobile-menu-icon {
+    /* Hidden by default on Desktop */
+    display: none;
+}
+
+/* --- Page Title / Banner --- */
+.service-page {
+    height: 500px;
+    background-color: #edf2fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-page h1 {
+    font-size: 70px;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+    max-width: 1700px;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.paths {
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.paths p {
+    font-size: 21px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.paths i {
+    color: rgb(5, 5, 70);
+}
+
+/* --- Services Grid Container --- */
+.service-page-service-boxes {
+    display: grid;
+    /* 4 columns layout on desktop */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(2, 500px); */
+    justify-items: center;
+    margin: 100px auto;
+    max-width: 1700px;
+    width: 90%;
+    column-gap: 30px;
+    row-gap: 60px;
+    align-items: center;
+}
+
+/* --- Service Box --- */
+.first-service-page-box {
+    height: 500px;
+    width: 100%; /* Fill the grid column */
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px; /* Adjusted padding for better fit */
+    gap: 25px;
+    border-radius: 15px;
+    background-color: #edf2fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.first-service-page-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.first-service-page-box img {
+    height: 100px;
+    width: 100px;
+}
+
+.first-service-page-box h4 {
+    font-size: 23px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.first-service-page-box p {
+    font-size: 18px;
+    color: #666; /* Better contrast */
+}
+
+/* --- Service Image Box --- */
+.first-service-page-image {
+    height: 500px;
+    width: 100%; /* Fill the grid column */
+    border-radius: 15px;
+    background-color: #edf2fa;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.first-service-page-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.first-service-page-image:hover img {
+    transform: scale(1.08);
+}
+
+/* --- Buttons --- */
+.expand-btn {
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: rgb(74, 124, 210);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* ======================================= */
+/* ===== 3. Mobile Menu Overlay Styles ===== */
+/* ======================================= */
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1001; /* Above navbar */
+    display: flex;
+    justify-content: flex-end; /* Slide in from right */
+    transition: background 0.3s ease;
+}
+
+.mobile-menu {
+    width: 70%; /* Takes up 70% of screen width */
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(0); /* Start visible */
+    transition: transform 0.3s ease-out;
+}
+
+.mobile-menu-overlay .mobile-menu {
+    /* If you set menuOpen state to false, you would apply a CSS class here to slide it off-screen */
+}
+
+.close-icon {
+    font-size: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+    color: #4a7cd2;
+}
+
+.mobile-menu p {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.mobile-menu button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgb(74, 124, 210);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+}
+
+
+/* ========================================= */
+/* ===== 4. Media Queries for Responsiveness ===== */
+/* ========================================= */
+
+/* Tablet/Medium Screens (up to 1200px) */
+@media (max-width: 1200px) {
+    .service-page-service-boxes {
+        /* Change grid to 3 columns on tablet */
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        row-gap: 50px;
+        margin: 80px auto;
+    }
+
+    /* Keep image boxes aligned but may span multiple columns for larger layout */
+    .first-service-page-image {
+        /* This is tricky: we want the image to occupy a space, but now the grid is 3 columns. */
+        /* Let's just treat all 8 items as fluid and let them rearrange naturally */
+        height: 400px;
+        display: none;
+    }
+}
+
+/* Small Tablet/Mobile Screens (up to 768px) */
+@media (max-width: 768px) {
+    /* --- Navbar --- */
+    .Contact-page-navbar {
+        height: 80px;
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .Contact-page-menus-navbar, .Contact-page-button-nav {
+        /* Hide desktop menu and button */
+        display: none;
+    }
+    
+    .mobile-menu-icon {
+        /* Show hamburger menu */
+        display: block;
+        font-size: 28px;
+        color: #4a7cd2;
+        cursor: pointer;
+    }
+
+    /* --- Page Title / Banner --- */
+    .service-page {
+        height: 250px;
+    }
+
+    .service-page h1 {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .paths p {
+        font-size: 16px;
+    }
+
+    /* --- Services Grid Container --- */
+    .service-page-service-boxes {
+        /* Change grid to 1 column on mobile */
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 50px auto;
+        padding: 0 20px;
+        width: auto;
+        height: auto; /* Allow height to adjust for stacked content */
+    }
+
+    /* --- Service Box/Image Box --- */
+    .first-service-page-box, .first-service-page-image {
+        /* All items now stack and are full width */
+        width: 100%;
+        height: auto; /* Fluid height */
+        padding: 40px 25px;
+        transform: none !important; /* Prevent hover from breaking layout on mobile */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .first-service-page-box:hover {
+        transform: none; /* Disable transform on mobile hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .first-service-page-image img {
+        height: 250px; /* Fixed height for image */
+    }
+    
+    .first-service-page-box h4 {
+        font-size: 20px;
+    }
+    
+    .first-service-page-box p {
+        font-size: 16px;
+    }
+}

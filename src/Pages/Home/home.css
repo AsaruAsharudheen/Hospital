@@ -1,0 +1,2110 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* body {
+  overflow: hidden;
+} */
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 0;
+}
+
+
+/* =========================================== */
+/* ===== 1. Base Styles & Desktop Default ===== */
+/* =========================================== */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Navbar (Desktop Default) --- */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  position: absolute;
+  /* CRITICAL: Change 2000px to 100% and add padding */
+  width: 100%;
+  padding: 30px 5%; /* 5% padding on left/right for spacing */
+  background-color: #020b59;
+  z-index: 100;
+  gap: 120px;
+}
+.logo {
+  z-index: 1;
+}
+
+/* Desktop Menu (Visible by default) */
+.menus-navbar {
+  display: flex;
+  gap: 40px;
+  z-index: 1;
+}
+.menus-navbar p {
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  /* Add hover effect for polish */
+  transition: color 0.3s ease;
+}
+.menus-navbar p:hover {
+  color: rgb(74, 124, 210);
+}
+
+/* Desktop Button Group (Visible by default) */
+.button-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+.button-nav button {
+  font-size: 20px;
+  padding: 15px 16px;
+  background-color: rgb(74, 124, 210);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button-nav button:hover {
+  background-color: #00264d;
+  transform: scale(1.05);
+}
+
+/* CRITICAL: Hide the fa-bars icon on desktop */
+.button-nav .fa-bars {
+  display: none;
+}
+
+/* --- Hero Section (Desktop Default) --- */
+.Home-page {
+  position: relative;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  /* Max width removed to ensure full-screen on any desktop */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.image img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.05);
+  animation: zoomOut 1.8s ease forwards;
+}
+.image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(2, 11, 89, 0.7),
+    transparent
+  ); /* Adjusted opacity for gradient */
+}
+
+/* Hero Overlay Text Container */
+.overlay-image {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 290px;
+  width: 1000px;
+  left: 170px;
+  gap: 30px;
+  z-index: 1;
+  /* Animations remain as-is */
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.overlay-image p {
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.overlay-image h1 {
+  font-size: 70px;
+  width: 800px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 90px;
+  letter-spacing: -2px;
+}
+
+.overlay-image button {
+  width: 200px;
+  padding: 15px 20px; /* Increased padding */
+  font-size: 18px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  border: 2px solid white; /* Thicker white border */
+  transition: all 0.3s ease;
+}
+
+.overlay-image button:hover {
+  background: #ffffff;
+  color: #020b59;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.rating {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.rating p {
+  font-size: 20px;
+  margin: 0;
+}
+.fa-star {
+  color: #fec42c;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================== */
+/* ===== 2. Tablet & Mobile Responsive CSS ===== */
+/* =========================================== */
+
+/* Tablet and Smaller Desktop Adjustments (Max 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 3%; /* Reduced side padding */
+    height: 80px;
+  }
+  .menus-navbar {
+    gap: 25px;
+  }
+  .menus-navbar p {
+    font-size: 18px;
+  }
+  .button-nav button {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  /* Hero Section */
+  .overlay-image {
+    top: 250px;
+    left: 5%; /* Align text with page edge */
+    width: 90%;
+    gap: 20px;
+  }
+  .overlay-image h1 {
+    font-size: 50px;
+    width: 90%;
+    line-height: 65px;
+  }
+  .overlay-image p {
+    font-size: 20px;
+  }
+  .rating p {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Adjustments (Max 768px) */
+@media (max-width: 768px) {
+  /* --- Navbar Mobile --- */
+  .navbar {
+    height: 70px;
+    padding: 15px 5%;
+    justify-content: space-between;
+    position: fixed; /* Keep it visible on top */
+    top: 0;
+  }
+  .menus-navbar,
+  .button-nav button {
+    /* CRITICAL: Hide desktop menu and button */
+    display: none;
+  }
+  .logo img {
+    height: 40px; /* Resize logo */
+  }
+  .button-nav {
+    /* Ensure the container is still displayed to show the icon */
+    display: flex;
+  }
+  .button-nav .fa-bars {
+    /* CRITICAL: Show the hamburger icon */
+    display: block;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* --- Hero Section Mobile --- */
+  .image img {
+    height: 80vh; /* Shorter hero image on mobile */
+  }
+  .overlay-image {
+    top: 220px; /* Move text up */
+    left: 5%;
+    width: 90%;
+    gap: 15px;
+  }
+  .overlay-image p {
+    font-size: 16px;
+  }
+  .overlay-image h1 {
+    font-size: 32px;
+    width: 100%;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+  .overlay-image button {
+    width: 100%; /* Full width button for better tap target */
+    max-width: 250px;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  .rating {
+    flex-direction: column; /* Stack rating items */
+    align-items: flex-start;
+    gap: 5px;
+    padding-top: 10px;
+  }
+  .rating p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================== */
+/* ===== 1. Desktop & Default Styles (Home Details) ===== */
+/* =========================================== */
+
+.details-home-page {
+  display: flex;
+  justify-content: center; /* Center content on wide screens */
+  align-items: center;
+  height: 200px; /* Fixed height for desktop */
+  background-color: #000a5b; /* Dark blue background */
+  z-index: 1;
+  gap: 100px; /* Reduced gap for better tablet fit */
+  padding: 0 5%; /* Add side padding */
+  font-family: 'Poppins', sans-serif;
+}
+
+.phone {
+  display: flex;
+  gap: 15px; /* Increased gap for better spacing */
+  align-items: center;
+  /* Base padding to be applied to all */
+  padding: 20px 0;
+  flex-shrink: 1; /* Allow items to shrink if necessary */
+}
+
+/* Specific styling for the first two boxes (Phone and Clock) */
+.detail-box-padded {
+  border-right: 1px solid rgba(128, 128, 128, 0.5); /* Semi-transparent gray border */
+  padding-right: 100px; /* Horizontal separator padding */
+}
+
+.phone i {
+  font-size: 50px;
+  color: #4a7cd2; /* Blue icon color */
+}
+
+.phone-detail {
+  display: flex;
+  flex-direction: column;
+  /* Reset text styles from inline for maintainability */
+}
+
+.phone-detail .detail-title {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.phone-detail .detail-subtext {
+  color: #9eaab9; /* Lighter gray color for readability */
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* =========================================== */
+/* ===== 2. Mobile Responsive Adjustments ===== */
+/* =========================================== */
+
+/* Tablet Adjustments (Max 1024px) */
+@media (max-width: 1024px) {
+  .details-home-page {
+    gap: 50px; /* Reduce gap further on tablets */
+    height: auto;
+    padding: 40px 5%;
+  }
+  .detail-box-padded {
+    padding-right: 50px; /* Reduce separator padding */
+  }
+  .phone-detail .detail-title {
+    font-size: 20px;
+  }
+  .phone-detail .detail-subtext {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Adjustments (Max 768px) */
+@media (max-width: 768px) {
+  .details-home-page {
+    /* CRITICAL: Stack items vertically */
+    flex-direction: column;
+    align-items: center; /* Align text to the left */
+    height: auto; /* Auto height for stacked items */
+    padding: 40px 5%;
+    gap: 30px; /* Gap between stacked items */
+  }
+
+  /* Remove borders and padding added for horizontal separation */
+  .detail-box-padded {
+    border-right: none !important;
+    padding-right: 0 !important;
+    /* Add a bottom border for visual separation on mobile */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    width: 100%; /* Take full width */
+    padding-bottom: 30px;
+  }
+
+  /* Ensure the last item (Email Us) doesn't have a bottom border */
+  .details-home-page .phone:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .phone i {
+    font-size: 35px;
+  }
+  .phone-detail .detail-title {
+    font-size: 18px;
+  }
+  .phone-detail .detail-subtext {
+    font-size: 15px;
+  }
+}
+
+.about-us-home {
+  height: 1000px;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+.about-us-home-left {
+  display: flex;
+  width: 1100px;
+  justify-content: right;
+  padding-right: 50px;
+  gap: 19px;
+  /* background-color: #000a5b; */
+}
+
+/* Fade-in animation */
+.about-us-home-left img {
+  height: 500px;
+  width: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Trigger animation when parent has .animate */
+.about-us-home-left.animate img {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* Stagger delay for each image */
+.about-us-home-left.animate img:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.about-us-home-left.animate img:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.about-us-home-left.animate img:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.right {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding-top: 150px;
+  font-family: 'Poppins', sans-serif;
+
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.right.animate {
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.right h1 {
+  font-size: 60px;
+  width: 650px;
+  font-weight: 500;
+  line-height: 70px;
+
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.right.animate h1 {
+  animation: fadeInText 1.2s ease-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Contents grid */
+.contents-aboutus h4 {
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  gap: 10px;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.right.animate .contents-aboutus h4 {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button */
+.right button {
+  font-size: 20px;
+  padding: 15px 16px;
+  background-color: rgb(74, 124, 210);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.right-main-p {
+  font-size: 22px;
+  color: gray;
+  line-height: 35px;
+}
+
+.right.animate button {
+  animation: buttonPop 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.right button:hover {
+  background-color: rgb(54, 104, 190);
+  transform: scale(1.05);
+}
+
+@keyframes buttonPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.contents-aboutus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+}
+
+/* =========================================== */
+/* ===== 1. Tablet Adjustments (max-width: 1024px) ===== */
+/* =========================================== */
+@media (max-width: 1024px) {
+  /* Reduce overall height/padding */
+  .about-us-home {
+    height: auto;
+    padding: 80px 3%;
+    gap: 30px;
+  }
+
+  /* Adjust container widths */
+  .about-us-home-left {
+    width: 45%; /* Slightly smaller image container */
+    padding-right: 20px;
+  }
+  .right {
+    width: 55%; /* Slightly larger text container */
+    padding-top: 50px; /* Less top padding */
+    gap: 25px;
+  }
+
+  /* Image Scaling (for smaller desktop/large tablet) */
+  .about-us-home-left img {
+    height: 400px;
+    width: 300px;
+    /* Replicate/adjust staggered offset (assuming you're using nth-child) */
+    margin-top: 80px;
+  }
+  .about-us-home-left img:nth-child(2) {
+    margin-top: 150px;
+  }
+
+  /* Text Resizing */
+  .right h1 {
+    font-size: 45px;
+    line-height: 55px;
+    width: 100%;
+  }
+  .contents-aboutus h4 {
+    font-size: 17px;
+  }
+}
+
+/* =========================================== */
+/* ===== 2. Mobile Adjustments (max-width: 768px) ===== */
+/* =========================================== */
+@media (max-width: 768px) {
+  .about-us-home {
+    /* CRITICAL: Stack the two columns vertically */
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .about-us-home-left,
+  .right {
+    /* Containers take full width */
+    width: 100%;
+    padding: 0;
+    align-items: flex-start; /* CRITICAL: Align content to the left */
+  }
+
+  /* --- Image Stacking Mobile --- */
+  .about-us-home-left {
+    /* Display images side-by-side or use one */
+    flex-direction: row;
+    justify-content: center; /* Center the image block */
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  /* Remove vertical offset and resize images */
+  .about-us-home-left img {
+    height: 250px;
+    width: 45%; /* Maintain two images side-by-side */
+    margin-top: 0 !important; /* Remove all vertical offsets */
+    object-fit: cover; /* Ensure images look good */
+  }
+
+  /* Optional: Hide the second image for very small screens */
+  .about-us-home-left img:nth-child(2) {
+    /* display: none; */
+  }
+
+  /* --- Right Text Section Mobile --- */
+  .right {
+    gap: 20px;
+  }
+
+  /* Ensure all text is left-aligned and sized for mobile readability */
+  .right p,
+  .right h1 {
+    /* Assuming pre-title and body-text paragraphs have appropriate classes */
+    text-align: left;
+  }
+
+  .right p:nth-child(1) {
+    /* Targeting the 'About Us' pre-title */
+    font-size: 18px;
+  }
+  .right h1 {
+    font-size: 32px;
+    line-height: 40px;
+    width: 100%;
+  }
+  .right p:nth-child(3) {
+    /* Targeting the body text paragraph */
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  /* Checkmark Grid Layout */
+  .contents-aboutus {
+    /* CRITICAL: Change 2-column grid to 1 column */
+    grid-template-columns: 1fr;
+  }
+  .contents-aboutus h4 {
+    font-size: 16px;
+    /* CRITICAL: Align checkmark items to the left */
+    justify-content: flex-start;
+  }
+
+  /* Button Adjustments */
+  .right button {
+    margin-top: 10px;
+    width: 60%;
+    max-width: 170px;
+    font-size: 15px;
+    padding: 10px;
+    /* CRITICAL: Align button to the left */
+    align-self: flex-start;
+  }
+}
+
+/* Contents grid animation */
+
+/* --- New Utility Classes --- */
+.text-primary {
+    color: #4a7cd2; 
+    font-weight: 600;
+}
+.pre-title {
+    font-size: 20px;
+}
+.body-text {
+    font-size: 22px;
+}
+
+/* --- Service Page Container --- */
+.ourServices-page {
+    background-color: rgb(237, 242, 250);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 1180px; /* Will be overridden in mobile */
+    align-items: center;
+    padding: 100px 5% 80px 5%; /* Added horizontal padding */
+    font-family: 'Poppins', sans-serif;
+}
+.ourServices-page h1 {
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Intro Text Styling */
+.services-intro-text {
+    width: 850px; /* Will be overridden in mobile */
+    text-align: center;
+    color: #555; /* Slightly better contrast */
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+/* --- Service Boxes Grid (Desktop Default) --- */
+.services-boxes {
+    display: grid;
+    /* CRITICAL: Desktop is 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
+    column-gap: 40px;
+    padding-top: 40px;
+    width: 100%; /* Use full width for grid */
+    max-width: 1700px; /* Add a max width for extra large screens */
+}
+
+/* --- Individual Service Box (renamed from first-service-box) --- */
+.service-box {
+    height: 500px; /* Fixed height is fine for desktop */
+    display: flex;
+    flex-direction: column;
+    /* Remove fixed width: 400px - let the grid handle it */
+    gap: 40px;
+    background-color: #ffffff;
+    padding: 60px 40px; /* Uniform padding */
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+    transition: transform 0.3s ease;
+}
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-box img {
+    height: 100px;
+    width: 100px;
+}
+.service-box h2 {
+    font-weight: 500;
+    font-size: 28px;
+}
+.box-description { /* Renamed p tag class */
+    /* Remove fixed width: 300px */
+    font-size: 19px;
+    color: gray;
+    line-height: 28px;
+}
+
+/* --- View All Button (Styles remain good) --- */
+.view-btn {
+    /* ... (your existing button styles) ... */
+    margin-top: 50px;
+}
+
+/* =========================================== */
+/* ===== Mobile Responsive Overrides ===== */
+/* =========================================== */
+
+/* Tablet Adjustments (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .ourServices-page {
+        padding-top: 100px;
+        height: auto;
+    }
+    .ourServices-page h1 {
+        font-size: 45px;
+    }
+    .services-intro-text {
+        width: 90%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* CRITICAL: Change to 2 columns on tablet */
+    .services-boxes {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px; /* Reduced gap */
+    }
+
+    .service-box {
+        height: 400px; /* Reduce height */
+        padding: 40px 30px; /* Reduce padding */
+        gap: 25px;
+    }
+    .service-box img {
+        height: 80px;
+        width: 80px;
+    }
+    .service-box h2 {
+        font-size: 24px;
+    }
+    .box-description {
+        font-size: 17px;
+    }
+}
+
+/* Mobile Adjustments (max-width: 600px) */
+@media (max-width: 600px) {
+    .ourServices-page {
+        gap: 15px;
+    }
+    .ourServices-page h1 {
+        font-size: 35px;
+    }
+    .services-intro-text {
+        font-size: 16px;
+        width: 100%;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    /* CRITICAL: Change to 1 column on mobile */
+    .services-boxes {
+        grid-template-columns: 1fr; 
+        gap: 20px; /* Stacked items gap */
+        padding-top: 20px;
+    }
+
+    .service-box {
+        height: auto; /* Auto height is better for stacking */
+        padding: 30px 20px;
+        gap: 20px;
+        align-items: flex-start; /* CRITICAL: Align content to the left */
+        text-align: left;
+    }
+    .service-box img {
+        height: 70px;
+        width: 70px;
+    }
+    .service-box h2 {
+        font-size: 22px;
+    }
+    .box-description {
+        font-size: 15px;
+    }
+}
+.view-btn {
+    /* Main Styling */
+    background: #4a7cd2;
+    color: #fff;
+    font-size: 18px; /* Slightly larger for better desktop impact */
+    font-weight: 600;
+    padding: 15px 35px; /* Increased padding */
+    border: none;
+    border-radius: 999px; /* Pill shape */
+    cursor: pointer;
+    margin-top: 50px;
+
+    /* Polish and Interaction */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 124, 210, 0.3);
+    
+    /* Ensure it can be centered/sized correctly */
+    display: inline-block;
+    max-width: 100%; /* Important for responsiveness */
+}
+
+/* Hover/Active Effects */
+.view-btn:hover {
+    background: #3b66b0;
+    box-shadow: 0 6px 14px rgba(74, 124, 210, 0.4);
+    transform: translateY(-2px);
+}
+
+.view-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(74, 124, 210, 0.3);
+}@media (max-width: 768px) {
+    .view-btn {
+        /* Adjust size for readability and tapping */
+        font-size: 16px;
+        padding: 12px 28px;
+        margin-top: 30px; /* Reduced margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .view-btn {
+        /* Make button full-width on very small screens for better accessibility */
+        width: 90%; 
+        padding: 15px 10px;
+    }
+}
+
+
+
+
+.patients-box-small {
+    /* CRITICAL: Remove fixed height and use padding */
+    height: auto;
+    padding: 50px 5%; 
+    
+    background-color: #000a5b;
+    display: flex;
+    /* CRITICAL: Use space-around or space-between instead of fixed gap for flexibility */
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if space runs out */
+}
+
+.first-patient-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Add padding/margin to maintain spacing when flex-wrap occurs */
+    padding: 20px 10px; 
+}
+
+/* Assuming the Counter component renders an h2 element */
+.first-patient-box h2 { 
+    font-size: 55px; /* Slightly larger for impact */
+    font-weight: 600; /* Bolder numbers */
+    color: #4a7cd2; /* Use the primary blue color for numbers */
+    line-height: 1;
+}
+.first-patient-box p {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tablet Adjustments (Max 1024px) */
+@media (max-width: 1024px) {
+    .patients-box-small {
+        /* Allow two rows if necessary, or force two items per row */
+        justify-content: space-evenly;
+        gap: 20px; /* Vertical and horizontal gap */
+    }
+    
+    .first-patient-box {
+        /* Set a max width so two items fit side-by-side on tablet */
+        max-width: 45%; 
+        padding: 15px 5px;
+    }
+    
+    .first-patient-box h2 {
+        font-size: 45px;
+    }
+    .first-patient-box p {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Adjustments (Max 600px) */
+@media (max-width: 600px) {
+    .patients-box-small {
+        /* Force single column layout */
+        flex-direction: column; 
+        padding: 40px 5%;
+        gap: 0; /* Remove gap, use padding on the box itself */
+    }
+    
+    .first-patient-box {
+        /* Take full width, add spacing between items */
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0; /* Vertical spacing between stacked items */
+        
+        /* Add a subtle separator between stacked items */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+    
+    /* Remove separator from the last item */
+    .first-patient-box:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    .first-patient-box h2 {
+        font-size: 40px;
+    }
+    .first-patient-box p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+.ourDental-team {
+  display: flex;
+  height: 100vh;
+}
+.left-our-dental-team {
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 170px;
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #00264d; */
+}
+.left-our-dental-team p {
+  font-size: 19px;
+  color: #4b7dd2;
+  font-weight: 600;
+}
+.left-our-dental-team h2 {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 80px;
+  letter-spacing: -2px;
+}
+.steps-box-our-dental-team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+}
+.steps-our-dental-team {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.steps-our-dental-team p {
+  line-height: 40px;
+  width: 400px;
+  color: #95a2b0;
+  font-weight: 400;
+}
+.steps-our-dental-team h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.right-our-dental-team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 800px;
+  /* margin: 0 auto; */
+  height: 1000px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  /* background-color: #1a1a1a; */
+  padding-left: 20px;
+}
+
+.left-dental-pics {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right-our-dental-team img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.left-dental-pics img {
+  flex-grow: 1;
+}
+
+.right-large-img {
+  height: 100%;
+}
+
+
+
+/* =========================================== */
+/* ===== Mobile Responsive Overrides (max-width: 768px) ===== */
+/* =========================================== */
+@media (max-width: 768px) {
+    .ourDental-team {
+        /* CRITICAL: Stack the main content columns */
+        flex-direction: column;
+        height: auto;
+        padding: 60px 10px; /* Adjusted padding for mobile */
+    }
+
+    /* --- Left Content Mobile Overrides --- */
+    .left-our-dental-team {
+        width: 100%; /* Take full width */
+        padding-left: 0; /* Remove fixed desktop padding */
+        gap: 20px;
+    }
+    .left-our-dental-team h2 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    /* Overriding inline and desktop styles for the intro paragraph */
+    .left-our-dental-team p:nth-of-type(2) {
+        color: #c9d0d7 !important; 
+        line-height: 28px !important; 
+        font-size: 16px !important;
+        border-bottom: 1px solid gray !important;
+        padding-bottom: 20px !important;
+        width: 100% !important; /* Remove fixed 850px width */
+        font-weight: 500 !important;
+    }
+
+    /* Change checklist to single column */
+    .steps-box-our-dental-team {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .steps-our-dental-team h4 {
+        font-size: 18px;
+    }
+    /* Overriding step description paragraph styles */
+    .steps-our-dental-team p {
+        line-height: 22px !important;
+        width: 100% !important; /* Remove fixed 400px width */
+        font-size: 15px;
+    }
+
+    /* --- Right Image Content Mobile Overrides --- */
+    .right-our-dental-team {
+        width: 96%; /* Take full width */
+        /* CRITICAL: Stack all images into a single column (the one with the two smaller images, and the large image) */
+        grid-template-columns: 1fr; 
+        height: auto; /* Remove fixed 1000px height */
+        padding-left: 0;
+        margin-top: 30px;
+        /* align-items: center; */
+    }
+
+    .left-dental-pics {
+        /* Put the two smaller images side-by-side */
+        flex-direction: row; 
+        gap: 15px;
+        height: 300px; /* Give the container a fixed height for uniform image sizing */
+    }
+
+    /* CRITICAL: Target the images with inline styles and reset them */
+    .left-dental-pics img[style] {
+        margin-left: 0 !important;
+        width: 50% !important; /* Make them equal size */
+        margin-top: 0 !important;
+        height: 100% !important; /* Match container height */
+    }
+
+    /* The right large image */
+    .right-large-img {
+        /* CRITICAL: Make the large image match the height of the two smaller ones */
+        height: 300px !important; 
+        width: 100%;
+        object-fit: cover;
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Doctor-page_ourServices-section {
+  background-color: rgb(237, 242, 250);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 1180px;
+  align-items: center;
+  padding-top: 150px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Doctor-page_main-title {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.Doctor-page_team-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 60px 0;
+  width: 90%;
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.Doctor-page_doctor-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+  height: 500px;
+}
+
+.Doctor-page_doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.Doctor-page_doctor-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.Doctor-page_detail-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Doctor-page_detail-box h4 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.Doctor-page_detail-box p {
+  font-size: 14px;
+  color: #4a7cd2;
+  font-weight: 500;
+  margin: 0;
+}
+
+.Doctor-page_doctor-card {
+  /* (Your existing styles remain here) */
+  opacity: 0;
+  transform: translateY(50px);
+  /* Set a base transition property, delay will be set in JS */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 2. Animated State: Fully visible and in place */
+.Doctor-page_doctor-card.animate-stagger {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================== */
+/* ===== Tablet Adjustments (max-width: 1200px) ===== */
+/* =========================================== */
+@media (max-width: 1200px) {
+    /* CRITICAL: Change to a 2-column layout on wider screens */
+    .Doctor-page_team-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        /* Remove fixed width to allow content to fill space */
+        width: 90%; 
+    }
+    
+    .Doctor-page_ourServices-section {
+        /* Remove fixed height and use padding */
+        height: auto; 
+        padding-top: 100px;
+    }
+
+    /* Scaling the main text elements */
+    .Doctor-page_main-title {
+        font-size: 48px;
+    }
+    
+    /* Overriding inline and fixed width for subtitle */
+    .Doctor-page_ourServices-section p.Doctor-page_subtitle {
+        width: 90% !important; 
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+}
+
+
+/* =========================================== */
+/* ===== Mobile Adjustments (max-width: 600px) ===== */
+/* =========================================== */
+@media (max-width: 600px) {
+    .Doctor-page_ourServices-section {
+        padding-top: 50px;
+        gap: 15px;
+    }
+
+    /* Text Resizing */
+    .Doctor-page_heading-tag { /* Targeting the 'Meet Our Dental Team' p tag */
+        font-size: 16px !important; 
+    }
+    .Doctor-page_main-title {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .Doctor-page_ourServices-section p.Doctor-page_subtitle {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
+
+    /* CRITICAL: Change to 1-column layout on phones */
+    .Doctor-page_team-boxes {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 0;
+        width: 85%; /* Slightly narrower cards */
+    }
+
+    /* Card Scaling */
+    .Doctor-page_doctor-card {
+        height: 400px; /* Reduced card height */
+    }
+    .Doctor-page_doctor-card img {
+        height: 450px; /* Image matches card height */
+    }
+
+    /* Detail box adjustments */
+    .Doctor-page_detail-box {
+        width: 90%; /* Wider detail box */
+        padding: 12px 8px;
+    }
+    .Doctor-page_detail-box h4 {
+        font-size: 16px;
+    }
+    .Doctor-page_detail-box p {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================= */
+/* 1. General & Staggered Animation Setup (Fade/Move Up)   */
+/* ======================================================= */
+
+/* Initial state (hidden and pushed down) for general fade-up */
+.ourServices-page,
+.services-boxes,
+.patients-box-small,
+.Doctor-page_ourServices-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final state (visible and in original position) */
+.ourServices-page.animate,
+.services-boxes.animate,
+.patients-box-small.animate,
+.Doctor-page_ourServices-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------ */
+/* 2. Specific Animations for About Us Section      */
+/* ------------------------------------------------ */
+
+/* Left Side: Initial state (pushed off to the left) */
+.about-us-home-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Left Side: Final state (slide in from left) */
+.about-us-home-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Right Side: Initial state (pushed off to the right) */
+.right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Right Side: Final state (slide in from right) */
+.right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ------------------------------------------------ */
+/* 3. Specific Animations for Why Choose Us Section */
+/* ------------------------------------------------ */
+
+/* Left Text Block: Initial state (standard fade up) */
+.left-our-dental-team {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 0.2s; /* Start slightly later than the images */
+}
+
+/* Left Text Block: Final state */
+.left-our-dental-team.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Right Image Block: Initial state (simple fade in) */
+.right-our-dental-team {
+  opacity: 0;
+  transition: opacity 1.5s ease-out; /* Slower fade in for visual effect */
+}
+
+/* Right Image Block: Final state */
+.right-our-dental-team.animate {
+  opacity: 1;
+}
+
+/* ------------------------------------------------ */
+/* 4. Staggered Animation for Doctor Cards          */
+/* ------------------------------------------------ */
+
+/* Initial State for individual cards: Hidden and slightly pushed down. */
+.Doctor-page_doctor-card {
+  opacity: 0;
+  transform: translateY(30px);
+  /* Transition applied here defines the speed of *each* card's animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animated State: Fully visible and in place. The 'transition-delay' 
+   is set by the JavaScript for the staggered effect. */
+.Doctor-page_doctor-card.animate-stagger {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quesions-about-hospital {
+  display: flex;
+  height: 800px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.left-quesions-about-hospital {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1000px;
+  padding-left: 170px;
+  padding-top: 220px;
+}
+.left-quesions-about-hospital h2 {
+  font-size: 60px;
+  font-weight: 500;
+}
+.left-quesions-about-hospital p {
+  font-size: 20px;
+  color: #4a7cd2;
+  font-weight: 600;
+}
+
+.right-quesions-about-hospital {
+  width: 900px;
+  padding-top: 200px;
+}
+
+/* ------------------------------------------------ */
+/* 5. FAQ/Accordion Section Styling & Animation     */
+/* ------------------------------------------------ */
+
+/* Add the main container to the observer list in your JS
+   (e.g., document.querySelector('.faq-section-container')) */
+.faq-section-container {
+  padding: 80px 0;
+  max-width: 1100px; /* Constrain width like in the image */
+  /* margin: 0 auto; */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.faq-section-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-item {
+  cursor: pointer;
+  padding: 15px 0;
+  /* The border in the image is typically applied to the bottom of the item */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-question-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question-toggle h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333; /* Darker text for question */
+  margin: 0;
+}
+
+.faq-answer {
+  /* Initially hide the answer, then use state/logic to show/hide */
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  color: gray;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+/* Example class when the FAQ is open (requires React state to apply this class) */
+.faq-item.open .faq-answer {
+  max-height: 200px; /* Large enough value to show the content */
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Style for the chevron icon */
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+  color: #4a7cd2;
+  font-size: 16px;
+}
+
+/* Rotate chevron when open */
+.faq-item.open .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* ... other CSS styles ... */
+
+/* Answer is initially hidden with height 0 */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  color: gray;
+  /* This transition is crucial for the animation! */
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+/* When the 'open' class is applied by JavaScript, expand the answer */
+.faq-item.open .faq-answer {
+  max-height: 200px; /* Must be a value larger than the content's height */
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Icon rotation for visual feedback */
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+  color: #4a7cd2;
+  font-size: 16px;
+}
+
+.faq-item.open .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media (max-width: 600px) {
+    @media (max-width: 600px) {
+    /* --- Main Container Overrides --- */
+    /* CRITICAL: Remove fixed height and use auto/padding */
+    .quesions-about-hospital {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px; /* Adjusted margin */
+        height: auto; /* IMPORTANT: Remove fixed height */
+        /* Ensure horizontal padding is applied, often on the parent container */
+        /* padding-left: 10px; */
+    }
+    
+    /* --- Left Heading Column Overrides --- */
+    .left-quesions-about-hospital {
+        /* CRITICAL: Must be full width, remove fixed width */
+        width: 100%; 
+        padding-top: 30px; /* Reduced padding */
+        padding-left: 15px; /* Remove fixed padding, let container padding handle it */
+        gap: 10px; /* Reduced gap for a tighter look */
+        /* Ensure the content is left-aligned (default for flex-direction: column) */
+        text-align: left; 
+    }
+    
+    /* --- Paragraph Overrides --- */
+    .left-quesions-about-hospital p {
+        /* CRITICAL: Remove fixed width */
+        width: 100%; 
+        font-size: 16px; 
+    }
+    
+    /* --- Heading Overrides --- */
+    .left-quesions-about-hospital h2 {
+        /* CRITICAL: Remove fixed width and scale font size */
+        width: 100%; 
+        font-size: 30px; /* A good size for mobile headings */
+        line-height: 1.2;
+    }
+
+    /* Target specific classes for clarity and priority */
+    .faq-pre-title {
+        font-size: 16px;
+    }
+    .faq-main-title {
+        font-size: 30px;
+    }
+}
+    .right-quesions-about-hospital{
+      padding-top: 70px;
+      width: 400px;
+    }
+  
+  }
+
+  /* =========================================== */
+/* ===== Tablet/Mobile Overrides (max-width: 992px) ===== */
+/* =========================================== */
+/* =========================================== */
+/* ===== Tablet/Mobile Overrides (max-width: 992px) ===== */
+/* =========================================== */
+@media (max-width: 992px) {
+    .questions {
+        gap: 15px;
+    }
+
+    .faq-item {
+        padding: 18px 0;
+    }
+
+    .faq-question-toggle {
+        /* CRITICAL: Ensure items start at the top, allowing the icon to align */
+        align-items: flex-start; 
+    }
+
+    /* Question text scaling */
+    .faq-question-toggle h4 {
+        font-size: 18px;
+        padding-right: 10px; 
+        /* Add margin to push the h4 content down slightly to vertically align the icon better */
+        margin-top: 2px;
+    }
+    
+    /* Icon sizing and positioning */
+    .fa-chevron-down {
+        font-size: 14px;
+        /* Push the icon down slightly to better align with the first line of text */
+        margin-top: 2px; 
+    }
+
+    /* Answer text scaling */
+    .faq-answer {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    /* Open state padding adjustment */
+    .faq-item.open .faq-answer {
+        padding-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* =========================================== */
+/* ===== Mobile Phone Adjustments (max-width: 500px) ===== */
+/* =========================================== */
+@media (max-width: 500px) {
+    .questions {
+        gap: 10px; 
+        padding: 10px;
+    }
+
+    .faq-item {
+        padding: 15px 0;
+    }
+    
+    .faq-question-toggle h4 {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+    
+    /* Ensure the max-height on open is large enough for mobile content */
+    .faq-item.open .faq-answer {
+        max-height: 400px; 
+    }
+
+    .fa-chevron-down {
+        font-size: 13px; /* Slightly smaller icon on the smallest screens */
+    }
+}
+
+/* ======================================================= */
+/* 6. Testimonials/Client Boxes Section (PERFECTED)        */
+/* ======================================================= */
+
+/* ======================================================= */
+/* 6. Testimonials Section (Final Conflict-Free Styles)    */
+/* ======================================================= */
+
+.Testimonials-page {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0;
+  align-items: center;
+  background-color: #f7f9fb;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure the text and H1 are styled correctly (already good) */
+.Testimonials-page h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* --- CRITICAL: The Scrollable Container --- */
+.Client-Boxes {
+  /* Set this to be wider than the viewport to enable scroll */
+  width: 100%;
+  padding: 60px 0; /* Vertical padding only */
+
+  /* CORE FLEXBOX PROPERTIES */
+  display: flex;
+  flex-wrap: nowrap; /* MUST NOT WRAP to enforce horizontal scroll */
+  overflow-x: scroll; /* Allows horizontal scrolling */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  /* Use a left margin to provide initial padding, exposing the first box */
+  margin-left: 5%;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Client-Boxes::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- CRITICAL: Individual Testimonial Card --- */
+.first-client-box {
+  /* FLEX PROPERTY to control size and prevent shrinking/growing */
+  flex: 0 0 350px; /* Fixed width of 350px */
+
+  /* Spacing and visual look */
+  margin-right: 30px; /* Spacing between cards */
+  padding: 40px;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Internal layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+
+  /* If you still can't see anything, temporarily remove the animation opacity/transform */
+}
+
+/* --- Card Content Details (As before) --- */
+.first-client-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 0;
+  border: 3px solid #4a7cd2;
+}
+/* ... rest of your card detail styles ... */
+/* ======================================================= */
+/* 6. Testimonials Section (Final Conflict-Free Styles)    */
+/* ======================================================= */
+
+/* 1. Main Section Container */
+.Testimonials-page {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 100px; /* Ample vertical padding */
+  align-items: center;
+  background-color: #f7f9fb; /* Light background color */
+  font-family: 'Poppins', sans-serif;
+  /* Important: This container must be 100% width for the scroll to work */
+  width: 100%;
+}
+
+/* 2. Heading and Intro Text Styling */
+.Testimonials-page h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+.Testimonials-page > p {
+  /* Target the direct P tag under the main container */
+  max-width: 950px;
+  margin: 0 auto 40px; /* Center and add space below text */
+}
+
+/* 3. CRITICAL: The Scrollable Client Container (Horizontal Flow) */
+.Client-Boxes {
+  width: 100%;
+  padding: 40px 0; /* Vertical spacing */
+
+  /* CORE FLEXBOX PROPERTIES */
+  display: flex;
+  flex-wrap: nowrap; /* Forces all cards onto a single line */
+
+  /* Enables scrolling */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  /* Use margin to create the left offset/padding */
+  margin-left: 5%;
+
+  /* Remove scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Client-Boxes::-webkit-scrollbar {
+  display: none;
+}
+
+/* 4. CRITICAL: Individual Testimonial Card */
+.first-client-box {
+  /* FLEX PROPERTY: Don't grow (0), Don't shrink (0), Fixed width (350px) */
+  flex: 0 0 350px;
+
+  /* Spacing and Visuals */
+  margin-right: 30px; /* Space between cards */
+  padding: 40px;
+  background-color: white;
+  border-radius: 20px;
+  /* Soft shadow to lift the card off the background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+  /* Internal Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Tighten up spacing slightly */
+}
+
+/* 5. Card Content Details */
+.first-client-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 0;
+  border: 3px solid #4a7cd2;
+}
+
+.first-client-box h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.customer-title {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.comments {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.Booking-div {
+  background-color: #4a7cd2;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+  justify-items: center;
+  align-items: center;
+  gap: 90px;
+}
+.Booking-div h3 {
+  font-size: 40px;
+  color: white;
+}
+.Booking-div button {
+  background: rgba(255, 255, 255, 0.1); /* Transparent glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 16px 32px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Booking-div button:hover {
+  background: rgba(74, 124, 210, 0.3); /* Soft blue on hover */
+  border-color: rgba(74, 124, 210, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(74, 124, 210, 0.4);
+}
+
+.Booking-div button:active {
+  transform: translateY(2px);
+  background: rgba(74, 124, 210, 0.5);
+  box-shadow: 0 4px 10px rgba(74, 124, 210, 0.3);
+}
+
+
+
+/* =========================================== */
+/* ===== Mobile Responsive Overrides (max-width: 850px) ===== */
+/* =========================================== */
+@media (max-width: 850px) {
+    .Booking-div {
+        /* CRITICAL: Remove fixed height and use padding */
+        height: auto; 
+        
+        /* Stack content vertically */
+        flex-direction: column; 
+        
+        /* Adjust padding for vertical spacing */
+        padding: 40px 5%; 
+        
+        /* Remove horizontal centering and gap settings for flex-direction: column */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        text-align: center; /* Ensure text is centered */
+    }
+    
+    .Booking-div h3 {
+        /* Scale heading font size down for mobile readability */
+        font-size: 28px;
+        /* Ensure the text wraps cleanly if it's too long */
+        max-width: 100%; 
+        line-height: 1.3;
+        margin: 0;
+    }
+    
+    .Booking-div button {
+        /* Scale button padding and font size for better tapping on mobile */
+        padding: 14px 28px;
+        font-size: 18px;
+        /* Ensure the button takes up a good width on smaller devices */
+        width: 80%; 
+        max-width: 300px;
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================================== */
+/* ===== Small Phone Adjustments (max-width: 480px) ===== */
+/* =========================================== */
+@media (max-width: 480px) {
+    .Booking-div {
+        padding: 30px 5%;
+    }
+    
+    .Booking-div h3 {
+        font-size: 24px;
+    }
+    
+    .Booking-div button {
+        /* Make the button nearly full-width for maximum visibility and tap area */
+        width: 100%; 
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+.fa-star {
+  color: #fec42c;
+}
+
+.rating {
+  display: flex;
+  gap: 15px;
+}
+
+.Doctor-page_doctor-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.Doctor-page_doctor-card.animate-stagger {
+  opacity: 1;
+  transform: translateY(0);
+}

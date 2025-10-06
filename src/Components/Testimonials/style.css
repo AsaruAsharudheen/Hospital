@@ -1,0 +1,260 @@
+/* ======================================================= */
+/* 6. Testimonials Section (Final & Functional Styles)     */
+/* ======================================================= */
+
+/* --- A. Main Section Container --- */
+.Testimonials-page {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 100px; /* Ample vertical padding */
+    align-items: center;
+    background-color: #f7f9fb; /* Light background color */
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box; /* Include padding/border in the element's total width/height */
+}
+
+/* Section Headings */
+.Testimonials-page h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+.Testimonials-page > p {
+    max-width: 950px;
+    margin: 0 auto 40px;
+}
+
+/* --- B. CRITICAL: The Scrollable Client Container --- */
+.Client-Boxes {
+    width: 100%;
+    padding: 40px 0; /* Vertical spacing only */
+    
+    /* CORE FLEXBOX PROPERTIES */
+    display: flex;
+    flex-wrap: nowrap;     /* ESSENTIAL: Forces cards onto a single horizontal line */
+    overflow-x: scroll;    /* Enables horizontal scrolling/dragging */
+    overflow-y: hidden;
+    scroll-behavior: smooth; /* ESSENTIAL: Allows smooth scrolling on dot click */
+    
+    /* Use margin to create the initial offset/padding for the first card */
+    margin-left: 5%; 
+    
+    /* Hide the scrollbar for a cleaner look */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.Client-Boxes::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* --- C. Individual Testimonial Card Styling --- */
+.first-client-box {
+    /* CRITICAL: Fixed width for calculation (350px) and prevents shrinking (0 0) */
+    flex: 0 0 350px; 
+    
+    /* Spacing and Visuals */
+    margin-right: 30px; /* Gap between cards (ESSENTIAL for JS calc) */
+    padding: 40px;
+    height: auto; 
+    background-color: white;
+    border-radius: 20px;
+    /* Soft shadow for the lifted effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    text-align: center;
+    
+    /* Internal Content Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Card Content Details */
+.first-client-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+    border: 3px solid #4a7cd2; /* Blue border around the image */
+}
+.first-client-box h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+.customer-title {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.comments {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- D. Carousel Dots Styling --- */
+.carousel-dots {
+    text-align: center;
+    padding: 20px 0 100px; 
+}
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d0d0d0; /* Inactive color */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.dot.active {
+    background-color: #4a7cd2; /* Active color */
+    transform: scale(1.2); /* Slightly larger when active */
+}/* --- A. CRITICAL: Individual Testimonial Card Styling --- */
+.first-client-box {
+    /* 1. Carousel Functionality (DO NOT CHANGE THESE) */
+    flex: 0 0 350px;       /* Fixed width (350px) and prevents shrinking */
+    margin-right: 30px;    /* Gap between cards */
+    
+    /* 2. Card Appearance & Spacing */
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    
+    /* Soft shadow to lift the card, matching the design */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    text-align: center;
+    
+    /* 3. Internal Content Layout (Stacking elements vertically) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally within the card */
+    gap: 10px; /* Spacing between internal elements */
+    
+    /* Ensures the card maintains its dimensions and doesn't get squashed */
+    min-height: 420px; 
+}
+
+/* --- B. Card Content Details --- */
+
+/* Quote Icon Style */
+.first-client-box .quote-icon {
+    /* The inline style in your JSX already handles color and font-size, 
+       but you can set margin-bottom here for better separation. */
+    margin-bottom: 20px;
+    line-height: 1; /* Prevents large empty space above the quote icon */
+}
+
+/* Customer Image Style */
+.first-client-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+    /* Blue border visible in the design */
+    border: 3px solid #4a7cd2; 
+}
+
+/* Customer Name */
+.first-client-box h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* Customer Title/Role */
+.customer-title {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Comment Text */
+.comments {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+/* =========================================== */
+/* ===== Tablet Adjustments (max-width: 1024px) ===== */
+/* =========================================== */
+@media (max-width: 1024px) {
+    /* --- Section Header Adjustments --- */
+    .Testimonials-page h1 {
+        font-size: 40px;
+    }
+    /* Overriding inline styles for subtitle */
+    .Testimonials-page > p {
+        width: 90% !important; /* Make it flexible */
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* --- Scrollable Container Adjustments --- */
+    .Client-Boxes {
+        /* Reduce the side margin/padding on the container */
+        margin-left: 3%;
+        padding: 30px 0;
+    }
+}
+
+
+/* =========================================== */
+/* ===== Mobile Adjustments (max-width: 768px) ===== */
+/* =========================================== */
+@media (max-width: 768px) {
+    /* --- Section Header Adjustments --- */
+    .Testimonials-page {
+        padding: 60px 0;
+    }
+    .Testimonials-page h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .Testimonials-page > p {
+        width: 90% !important;
+        font-size: 16px !important;
+    }
+
+    /* --- CRITICAL: Scrollable Container Adjustments --- */
+    .Client-Boxes {
+        /* Use a tighter side margin on small screens */
+        margin-left: 5%; 
+    }
+    
+    /* --- CRITICAL: Individual Card Overrides --- */
+    .first-client-box {
+        /* This is the key change for mobile: make the card full width */
+        /* Formula: 100% of the viewport MINUS the container margin/padding (5%) 
+           MINUS the gap (30px) that follows the card. */
+        flex: 0 0 calc(95vw - 30px - 5%); /* 95vw is roughly full width minus 5% margin */
+        margin-right: 30px; /* Keep the gap */
+        
+        padding: 25px; /* Reduced padding inside the card */
+        min-height: auto; /* Allow height to adjust naturally */
+    }
+    
+    /* Card Content Scaling */
+    .first-client-box h4 {
+        font-size: 20px;
+    }
+    .customer-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .comments {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
