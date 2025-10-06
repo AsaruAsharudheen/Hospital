@@ -48,3 +48,29 @@ body, h1, h2, h3, p {
   font-weight: normal;
   font-style: normal;
 }
+/* 1. Reset margins, paddings, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Make html/body responsive */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: "MyFont", "Poppins", "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%; /* will never exceed parent width */
+  height: auto;    /* maintain aspect ratio */
+  display: block;  /* remove inline spacing */
+}
+.container {
+  width: 90%;       /* keeps some padding from edges */
+  max-width: 1200px; /* optional: prevents super wide content */
+  margin: 0 auto;    /* center content */
+}
