@@ -242,7 +242,7 @@
     font-size: 20px;
   }
   .rating p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -278,7 +278,7 @@
 
   /* --- Hero Section Mobile --- */
   .image img {
-    height: 80vh; /* Shorter hero image on mobile */
+    height: 90vh; /* Shorter hero image on mobile */
   }
   .overlay-image {
     top: 220px; /* Move text up */
@@ -304,7 +304,7 @@
   .rating {
     flex-direction: column; /* Stack rating items */
     align-items: flex-start;
-    gap: 5px;
+    /* gap: 5px; */
     padding-top: 10px;
   }
   .rating p {
@@ -377,7 +377,7 @@
     gap: 50px; /* Reduce gap further on tablets */
     height: auto;
     padding: 40px 5%;
-    margin-top: 20px;
+    
   }
   .detail-box-padded {
     padding-right: 50px; /* Reduce separator padding */
