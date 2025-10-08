@@ -242,7 +242,7 @@
         margin-right: 30px; /* Keep the gap */
         
         padding: 25px; /* Reduced padding inside the card */
-        min-height: auto; /* Allow height to adjust naturally */
+        
     }
     
     /* Card Content Scaling */
