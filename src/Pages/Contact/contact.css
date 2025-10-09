@@ -144,7 +144,7 @@
 }
 
 .left-contact-page h1 {
-  font-size: 50px;
+  font-size: 44px;
   font-weight: 600;
   line-height: 70px;
   color: #0a1f44;
@@ -202,14 +202,14 @@
   gap: 30px;
   background-color: #edf2fa;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   padding: 40px;
   border-radius: 16px;
   justify-content: center;
 }
 
 .right-contact-page h3 {
-  font-size: 32px;
+  font-size: 27px;
   font-weight: 600;
   color: #0a1f44;
   margin-bottom: 10px;
