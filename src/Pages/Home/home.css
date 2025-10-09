@@ -1065,7 +1065,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  padding-left: 170px;
+  padding-left: 80px;
   font-family: 'Poppins', sans-serif;
   /* background-color: #00264d; */
 }
@@ -1075,7 +1075,7 @@
   font-weight: 600;
 }
 .left-our-dental-team h2 {
-  font-size: 62px;
+  font-size: 44px;
   font-weight: 500;
   line-height: 80px;
   letter-spacing: -2px;
@@ -1097,7 +1097,7 @@
   font-weight: 400;
 }
 .steps-our-dental-team h4 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -1244,9 +1244,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 1180px;
+  height: 1080px;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 80px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1550,7 +1550,7 @@
 }
 
 .right-quesions-about-hospital {
-  width: 900px;
+  width: 800px;
   padding-top: 200px;
 }
 
