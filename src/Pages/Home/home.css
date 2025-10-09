@@ -435,7 +435,7 @@
 }
 .about-us-home-left {
   display: flex;
-  width: 1100px;
+  width: 900px;
   justify-content: right;
   padding-right: 50px;
   gap: 19px;
@@ -445,7 +445,7 @@
 /* Fade-in animation */
 .about-us-home-left img {
   height: 500px;
-  width: 400px;
+  width: 300px;
   object-fit: contain;
   border-radius: 15px;
   opacity: 0;
@@ -500,7 +500,7 @@
 
 /* Heading */
 .right h1 {
-  font-size: 60px;
+  font-size: 44px;
   width: 650px;
   font-weight: 500;
   line-height: 70px;
@@ -525,7 +525,7 @@
 
 /* Contents grid */
 .contents-aboutus h4 {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 500;
   display: flex;
   gap: 10px;
@@ -547,7 +547,7 @@
 
 /* Button */
 .right button {
-  font-size: 20px;
+  font-size: 18px;
   padding: 15px 16px;
   background-color: rgb(74, 124, 210);
   color: #ffffff;
@@ -559,6 +559,7 @@
   align-items: center;
   gap: 8px;
   width: 200px;
+  height: 150px;
 
   opacity: 0;
   transform: scale(0.8);
@@ -751,7 +752,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 1180px; /* Will be overridden in mobile */
+    height: 1080px; /* Will be overridden in mobile */
     align-items: center;
     padding: 80px 5% 80px 5%; /* Added horizontal padding */
     font-family: 'Poppins', sans-serif;
