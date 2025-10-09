@@ -12,7 +12,7 @@
 .footer-content {
     display: flex;
     /* justify-content: space-between;  */
-    gap: 250px;
+    gap: 150px;
     max-width: 1900px;
     margin: 0 auto;
     padding: 0 5%;
@@ -24,7 +24,7 @@
 
 /* Logo & Description Column */
 .footer-logo-col {
-    max-width: 300px;
+    max-width: 200px;
 }
 .footer-logo-col .logo {
     font-size: 30px;
@@ -41,7 +41,7 @@
 
 /* Heading for each column (Company, Our Services, Contact Us) */
 .footer-column h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: white;
     margin-bottom: 25px;
@@ -58,7 +58,7 @@
 .footer-column a {
     color: #c7d2e0;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 .footer-column a:hover {
