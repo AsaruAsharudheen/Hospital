@@ -116,7 +116,7 @@ const Contact = () => {
 
       <div className="Contact-page-contents">
         <div className="left-contact-page">
-          <p style={{ color: '#4a7cd2' }}>Get In Touch</p>
+          <p style={{ color: '#4a7cd2',fontSize:'20px' }}>Get In Touch</p>
           <h1>We are always ready to help you and answer your questions</h1>
           <p>
             Whether you have a question, a suggestion, or just want to say
