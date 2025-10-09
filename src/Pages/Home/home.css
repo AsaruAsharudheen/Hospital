@@ -128,7 +128,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 290px;
+  top: 250px;
   width: 1000px;
   left: 120px;
   gap: 30px;
@@ -147,15 +147,15 @@
 
 .overlay-image h1 {
   font-size: 44px;
-  width: 800px;
+  width: 600px;
   color: #ffffff;
   font-weight: 500;
-  line-height: 90px;
+  line-height: 60px;
   letter-spacing: -2px;
 }
 
 .overlay-image button {
-  width: 200px;
+  width: 290px;
   padding: 15px 20px; /* Increased padding */
   font-size: 18px;
   background-color: transparent;
