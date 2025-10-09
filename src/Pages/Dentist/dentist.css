@@ -135,7 +135,7 @@ margin-bottom: 100px;
 }
 .first-card-dentist-page {
   display: flex;
-  height: 400px;
+  height: 600px;
   width: 1270px;
   margin: auto;
   /* background-color: #00264d; */
@@ -144,7 +144,7 @@ margin-bottom: 100px;
 
 }
 .first-card-dentist-page img {
-  height: 400px;
+  height: 600px;
   width: 400px;
   object-fit: cover;
   border-bottom-left-radius: 15px;
