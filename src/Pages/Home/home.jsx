@@ -350,7 +350,7 @@ const Home = () => {
                 fontSize: '20px',
                 borderBottom: '1px solid gray',
                 paddingBottom: '40px',
-                width: '850px',
+                width: '650px',
                 fontWeight: '500',
               }}
             >
