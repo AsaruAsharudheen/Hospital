@@ -176,7 +176,7 @@ const Dentist = () => {
         </div>
         <div className="first-card-dentist-page">
           <div className="left-card-dentist-page">
-            <img src="/dentist2.webp" alt="" />
+            <img style={{ width: '400px' }} src="/dentist2.webp" alt="" />
           </div>
           <div className="right-card-dentist-page">
             <div className="dentist-name">
