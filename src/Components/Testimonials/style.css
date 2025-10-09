@@ -6,7 +6,7 @@
 .Testimonials-page {
     display: flex;
     flex-direction: column;
-    padding: 100px 0 100px; /* Ample vertical padding */
+    padding: 80px 0 100px; /* Ample vertical padding */
     align-items: center;
     background-color: #f7f9fb; /* Light background color */
     font-family: 'Poppins', sans-serif;
@@ -16,7 +16,7 @@
 
 /* Section Headings */
 .Testimonials-page h1 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@
     border: 3px solid #4a7cd2; /* Blue border around the image */
 }
 .first-client-box h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: #333;
     margin: 0;
@@ -92,7 +92,7 @@
     margin-bottom: 20px;
 }
 .comments {
-    font-size: 17px;
+    font-size: 14px;
     color: #555;
     line-height: 1.6;
 }

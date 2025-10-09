@@ -413,7 +413,7 @@ const Home = () => {
           <h1 className="Doctor-page_main-title">Committed to Your Smile</h1>
           <p
             style={{
-              fontSize: '22px',
+              fontSize: '20px',
               width: '950px',
               textAlign: 'center',
               color: '#b3bdca',
