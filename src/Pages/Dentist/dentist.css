@@ -145,7 +145,7 @@ margin-bottom: 100px;
 }
 .first-card-dentist-page img {
   height: 600px;
-  width: 400px;
+  width: 450px;
   object-fit: cover;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
@@ -455,7 +455,7 @@ body {
 .right-card-dentist-page {
     display: flex;
     flex-direction: column;
-    padding: 80px 80px; /* Combined padding-left and padding-top */
+    padding: 50px 80px; /* Combined padding-left and padding-top */
     gap: 30px;
     flex-grow: 1; /* Allows it to take up the remaining space */
 }
