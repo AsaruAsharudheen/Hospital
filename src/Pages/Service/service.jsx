@@ -55,7 +55,7 @@ const Service = () => {
       {/* Navbar */}
       <div className="Contact-page-navbar">
         {/* Logo */}
-        <div className="Contact-page-logo">
+        <div className="logo">
           <img src="/logo-black.webp" alt="Logo" />
         </div>
 

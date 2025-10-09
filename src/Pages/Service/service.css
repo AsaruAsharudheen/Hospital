@@ -183,7 +183,7 @@ body {
 
 /* --- Service Box --- */
 .first-service-page-box {
-    height: 500px;
+    height: 400px;
     width: 100%; /* Fill the grid column */
     display: flex;
     flex-direction: column;
@@ -201,8 +201,8 @@ body {
 }
 
 .first-service-page-box img {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 
 .first-service-page-box h4 {
