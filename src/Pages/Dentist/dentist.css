@@ -401,8 +401,8 @@ body {
 
 .left-card-dentist-page img {
   height: 600px;
-  width: 400px;
-  object-fit: fill;
+  width: 500px;
+  object-fit: cover;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
 }
