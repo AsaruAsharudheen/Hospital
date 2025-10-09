@@ -130,7 +130,7 @@
   flex-direction: column;
   top: 250px;
   width: 1000px;
-  left: 90px;
+  left: 110px;
   gap: 30px;
   z-index: 1;
   /* Animations remain as-is */
@@ -1070,7 +1070,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  padding-left: 80px;
+  padding-left: 110px;
   font-family: 'Poppins', sans-serif;
   /* background-color: #00264d; */
 }
