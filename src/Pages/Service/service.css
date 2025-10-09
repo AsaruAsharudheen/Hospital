@@ -187,7 +187,7 @@ body {
     width: 100%; /* Fill the grid column */
     display: flex;
     flex-direction: column;
-    padding: 60px 40px; /* Adjusted padding for better fit */
+    padding: 40px 40px; /* Adjusted padding for better fit */
     gap: 25px;
     border-radius: 15px;
     background-color: #edf2fa;
@@ -206,7 +206,7 @@ body {
 }
 
 .first-service-page-box h4 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     padding-top: 10px;
 }
@@ -218,7 +218,7 @@ body {
 
 /* --- Service Image Box --- */
 .first-service-page-image {
-    height: 500px;
+    height: 400px;
     width: 100%; /* Fill the grid column */
     border-radius: 15px;
     background-color: #edf2fa;
