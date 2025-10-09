@@ -140,10 +140,10 @@ body {
 }
 
 .service-page h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 500;
     border-bottom: 1px solid black;
-    max-width: 1200px;
+    max-width: 1300px;
     width: 90%;
     text-align: center;
     padding-bottom: 40px;
