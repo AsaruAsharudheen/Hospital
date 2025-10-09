@@ -103,3 +103,8 @@
     /* Ensure logo is white or easily visible */
   }
 }
+
+.logo img {
+  height: 80px;
+  width: 80px;
+}
