@@ -331,7 +331,7 @@ body {
 }
 
 .Dentist-page-menus-navbar p {
-    font-size: 22px;
+    font-size: 18px;
     color: rgb(0, 0, 0);
     font-weight: 500;
     cursor: pointer;
@@ -395,12 +395,12 @@ body {
 }
 
 .Dentist-page-service h1 {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 500;
     border-bottom: 1px solid black;
     /* Use max-width for better control */
     width: 90%; 
-    max-width: 1700px;
+    max-width: 1300px;
     text-align: center;
     padding-bottom: 40px;
 }
@@ -433,15 +433,14 @@ body {
 }
 
 /* --- Single Dentist Card (Desktop) --- */
-.first-card-dentist-page {
+/* .first-card-dentist-page {
     display: flex;
     height: 800px;
-    /* Use max-width and margin: auto for centering and scaling */
     width: 90%;
     max-width: 1670px;
     background-color: #f8f9fa;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Added shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
 }
 
 .left-card-dentist-page img {
@@ -450,7 +449,7 @@ body {
     object-fit: cover;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-}
+} */
 
 
 .right-card-dentist-page {
