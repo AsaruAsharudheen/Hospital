@@ -35,7 +35,7 @@
   /* CRITICAL: Change 2000px to 100% and add padding */
   width: 100%;
   padding: 30px 5%; /* 5% padding on left/right for spacing */
-  background-color: #020b59;
+  background-color: transparent;
   z-index: 100;
   gap: 160px;
 }
