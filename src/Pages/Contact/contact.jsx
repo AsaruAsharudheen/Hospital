@@ -58,8 +58,8 @@ const Contact = () => {
     <>
       <div className="Contact-page-navbar">
         {/* Logo */}
-        <div className="Contact-page-logo">
-          <img src="/logo-black.webp" alt="Logo" />
+        <div className="logo">
+          <img src="/footer_logo_689996d86fda9.webp" alt="Logo" />
         </div>
 
         {/* Desktop Menu */}
