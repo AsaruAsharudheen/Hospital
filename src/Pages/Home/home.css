@@ -479,7 +479,7 @@
   width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 25px;
   padding-top: 150px;
   font-family: 'Poppins', sans-serif;
 
@@ -500,7 +500,7 @@
 
 /* Heading */
 .right h1 {
-  font-size: 44px;
+  font-size: 40px;
   width: 650px;
   font-weight: 500;
   line-height: 70px;
@@ -566,7 +566,7 @@
 }
 
 .right-main-p {
-  font-size: 22px;
+  font-size: 18px;
   color: gray;
   line-height: 35px;
 }
