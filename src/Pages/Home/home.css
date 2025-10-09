@@ -130,7 +130,7 @@
   flex-direction: column;
   top: 290px;
   width: 1000px;
-  left: 170px;
+  left: 120px;
   gap: 30px;
   z-index: 1;
   /* Animations remain as-is */
@@ -141,12 +141,12 @@
 }
 
 .overlay-image p {
-  font-size: 23px;
+  font-size: 20px;
   color: #ffffff;
 }
 
 .overlay-image h1 {
-  font-size: 70px;
+  font-size: 44px;
   width: 800px;
   color: #ffffff;
   font-weight: 500;
@@ -163,6 +163,7 @@
   color: white;
   border: 2px solid white; /* Thicker white border */
   transition: all 0.3s ease;
+  height: 60px;
 }
 
 .overlay-image button:hover {
@@ -178,7 +179,7 @@
   align-items: center;
 }
 .rating p {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
 }
 .fa-star {
@@ -437,7 +438,7 @@
   display: flex;
   width: 900px;
   justify-content: right;
-  padding-right: 20px;
+  padding-right: 40px;
   gap: 19px;
   /* background-color: #000a5b; */
 }
@@ -486,7 +487,7 @@
 
   opacity: 0;
   transform: translateY(50px);
-  margin-right: 50px;
+  margin-right: 70px;
 }
 
 .right.animate {

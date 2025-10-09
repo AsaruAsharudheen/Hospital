@@ -208,7 +208,7 @@ const Home = () => {
           <div className="right">
             <p
               style={{
-                fontSize: '22px',
+                fontSize: '18px',
                 color: 'rgb(74,124,210)',
                 fontWeight: '600',
               }}
