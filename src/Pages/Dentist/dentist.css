@@ -455,19 +455,12 @@ body {
 .right-card-dentist-page {
     display: flex;
     flex-direction: column;
-    padding: 110px 80px; /* Combined padding-left and padding-top */
+    padding: 80px 80px; /* Combined padding-left and padding-top */
     gap: 30px;
     flex-grow: 1; /* Allows it to take up the remaining space */
 }
 
-.right-card-dentist-page h4 {
-    font-size: 25px;
-    font-weight: 500;
-}
-.right-card-dentist-page p {
-    font-size: 19px;
-    color: #444; /* Changed color from light to dark for better contrast */
-}
+
 
 /* Grouping for consistency */
 .dentist-name, .dentist-qualification, .dentist-certification, .dentist-awards {
