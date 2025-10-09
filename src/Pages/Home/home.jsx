@@ -392,7 +392,7 @@ const Home = () => {
                 src="/s3.webp"
                 alt="Close-up of friendly dental team"
                 class="bottom-left-img"
-                style={{ marginTop: '25px' }}
+                style={{ marginTop: '29px' }}
               />
             </div>
 
