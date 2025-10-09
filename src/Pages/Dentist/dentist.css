@@ -135,8 +135,8 @@ margin-bottom: 100px;
 }
 .first-card-dentist-page {
   display: flex;
-  height: 600px;
-  width: 1370px;
+  height: 400px;
+  width: 1270px;
   margin: auto;
   /* background-color: #00264d; */
   border-radius: 15px;
@@ -144,7 +144,7 @@ margin-bottom: 100px;
 
 }
 .first-card-dentist-page img {
-  height: 500px;
+  height: 400px;
   width: 400px;
   object-fit: cover;
   border-bottom-left-radius: 15px;
@@ -162,11 +162,11 @@ margin-bottom: 100px;
 
 }
 .right-card-dentist-page h4{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
 }
 .right-card-dentist-page p{
-    font-size: 19px;
+    font-size: 17px;
     color: #a9c1d6;
 }
 
