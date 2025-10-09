@@ -38,7 +38,7 @@
   padding: 30px 5%; /* 5% padding on left/right for spacing */
   background-color: #020b59;
   z-index: 100;
-  gap: 120px;
+  gap: 140px;
 }
 .logo {
   z-index: 1;
@@ -1556,8 +1556,9 @@
 }
 
 .right-quesions-about-hospital {
-  width: 800px;
+  width: 700px;
   padding-top: 200px;
+  margin-right: 20px;
 }
 
 /* ------------------------------------------------ */
