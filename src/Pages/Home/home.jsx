@@ -347,7 +347,7 @@ const Home = () => {
               style={{
                 color: '#c9d0d7',
                 lineHeight: '40px',
-                fontSize: '20px',
+                fontSize: '16px',
                 borderBottom: '1px solid gray',
                 paddingBottom: '40px',
                 width: '650px',
