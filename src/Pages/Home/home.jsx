@@ -202,8 +202,8 @@ const Home = () => {
         </div>
         <div className="about-us-home">
           <div className="about-us-home-left">
-            <img style={{ marginTop: '220px' }} src="/p1.webp" alt="" />
-            <img style={{ marginTop: '300px' }} src="/p2.webp" alt="" />
+            <img style={{ marginTop: '120px' }} src="/p1.webp" alt="" />
+            <img style={{ marginTop: '200px' }} src="/p2.webp" alt="" />
           </div>
           <div className="right">
             <p
